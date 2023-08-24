@@ -32,8 +32,8 @@ const Frog = require("../../src/Frog");
 // This function will be called when the server starts
 function onLoad() {
 	/** 
-     * 1.0 - Logging messages
-     */
+	 * 1.0 - Logging messages
+	 */
 
 	Logger.info("This is an informational message");
 	Logger.warning("This is a warning message");
@@ -46,8 +46,8 @@ function onLoad() {
 	Logger.log("CUSTOM", 30, "This is a message with a custom log level", "info");
 
 	/**
-     * 1.1 - Getting all the logged messages
-     */
+	 * 1.1 - Getting all the logged messages
+	 */
 
 	const messages = Logger.messages;
 	const formattedMessages = JSON.stringify(messages);
@@ -56,71 +56,71 @@ function onLoad() {
 	console.log(formattedMessages);
 
 	/**
-     * 1.2 - Using colors in console
-     */
+	 * 1.2 - Using colors in console
+	 */
 	Logger.info(Colors.RED + "This text should be in red!");
 
 	/**
-     * 1.3 - Broadcasting messages
-     */
+	 * 1.3 - Broadcasting messages
+	 */
 	Frog.broadcastMessage("This message is a broadcast");
 
 	/**
-     * 2.0 - Events
-     */
+	 * 2.0 - Events
+	 */
 	Frog.eventEmitter.on("playerSpawn", (event) => {
 		/**
-         * 3.0 - Using the basics of the Player object
-         */
+		 * 3.0 - Using the basics of the Player object
+		 */
 		const player = event.player;
 
 		/**
-         * 3.1 - Sending messages to players
-         */
+		 * 3.1 - Sending messages to players
+		 */
 
 		player.sendMessage("Hello, world!");
 
 		/**
-         * 3.2 - Sending messages as a player
-         */
+		 * 3.2 - Sending messages as a player
+		 */
 
 		player.chat("This message was sent by a plugin");
 
 		/**
-         * 3.3 - Changing player's gamemode
-         */
+		 * 3.3 - Changing player's gamemode
+		 */
 		player.setGamemode(Gamemode.SURVIVAL);
 
 		/**
-         * 3.4 - Changing player's time
-         */
+		 * 3.4 - Changing player's time
+		 */
 		player.setTime(17000);
 
 		/**
-         * 3.6 - Changing player's health
-         */
+		 * 3.6 - Changing player's health
+		 */
 		player.setHealth(player.health - 1);
 
 		/**
-         * 3.7 - Changing player's food level
-         */
+		 * 3.7 - Changing player's food level
+		 */
 		player.setHunger(player.hunger - 1);
 
 		/**
-         * 3.8 - Changing player's speed
-         */
+		 * 3.8 - Changing player's speed
+		 */
 		player.setSpeed(5);
 
 		/**
-         * 3.9 - Changing player's OP status
-         */
+		 * 3.9 - Changing player's OP status
+		 */
 		player.setOp(true); // Give OP status
 		player.setOp(false); // Revoke OP status
 
 		/**
-         * 3.10 - Changing player's velocity
-         * NOTE: This will only work if the player is in survival/creative/adventure gamemode!
-         */
+		 * 3.10 - Changing player's velocity
+		 * NOTE: This will only work if the player is in survival/creative/adventure gamemode!
+		 */
 		setTimeout(() => {
 			player.setVelocity(1, 1, 1);
 			setTimeout(() => {
@@ -129,181 +129,181 @@ function onLoad() {
 		}, 2000); // Let's delay this by 2 seconds
 
 		/**
-         * 3.11 - Transfering a player to another server
-         */
+		 * 3.11 - Transfering a player to another server
+		 */
 		setTimeout(() => {
 			player.transfer("127.0.0.1", 19132);
 		}, 60000); // Let's delay this by 1 minute in order to not get instantly transferred
 
 		/**
-         * 3.12 - Changing player's chunk radius/render distance
-         */
+		 * 3.12 - Changing player's chunk radius/render distance
+		 */
 		player.setChunkRadius(3);
 
 		/**
-         * 3.13 - Teleporting the player
-         */
+		 * 3.13 - Teleporting the player
+		 */
 		player.teleport(player.location.x, player.location.y + 5, player.location.x);
 
 		/**
-         * 3.14 - Changing player's dimension
-         */
+		 * 3.14 - Changing player's dimension
+		 */
 		setTimeout(() => {
 			player.setDimension(100, 100, 100, DimensionId.END);
 		}, 50000); // Let's delay this by 50 seconds
 
 		/**
-         * 3.15 - Killing the player
-         */
+		 * 3.15 - Killing the player
+		 */
 		setTimeout(() => {
 			player.kill();
 		}, 48000); // Let's delay this by 48 seconds
 
 		/**
-         * 3.16 - Checking if the player is dead
-         */
+		 * 3.16 - Checking if the player is dead
+		 */
 		player.dead;
 
 		/**
-         * 3.17 - Getting player's username
-         */
+		 * 3.17 - Getting player's username
+		 */
 		player.username;
 
 		/**
-         * 3.18 - Getting player's health
-         */
+		 * 3.18 - Getting player's health
+		 */
 		player.health;
 
 		/**
-         * 3.19 - Getting player's hunger/food level
-         */
+		 * 3.19 - Getting player's hunger/food level
+		 */
 		player.hunger;
 
 		/**
-         * 4.0 - Managing player's network details
-         */
+		 * 4.0 - Managing player's network details
+		 */
 
 		/**
-         * 4.1 - Getting player's IP address
-         */
+		 * 4.1 - Getting player's IP address
+		 */
 		player.network.address;
 
 		/**
-         * 4.2 - Getting player's connection port
-         */
+		 * 4.2 - Getting player's connection port
+		 */
 		player.network.port;
 
 		/**
-         * 4.3 - Checking if the player is offline
-         */
+		 * 4.3 - Checking if the player is offline
+		 */
 		player.network.offline;
 
 		/**
-         * 4.4 - Getting player's protocol version
-         */
+		 * 4.4 - Getting player's protocol version
+		 */
 		player.network.protocolVersion;
 
 		/**
-         * 5.0 - Managing player's permissions
-         */
+		 * 5.0 - Managing player's permissions
+		 */
 
 		/**
-         * 5.1 - Checking if the player is opped
-         */
+		 * 5.1 - Checking if the player is opped
+		 */
 		player.permissions.op;
 
 		/**
-         * 5.2 - Checking if the player is console
-         */
+		 * 5.2 - Checking if the player is console
+		 */
 		player.permissions.permissionLevel;
 
 		/**
-         * 5.3 - Getting player's version
-         */
+		 * 5.3 - Getting player's version
+		 */
 		player.network.version;
 
 		/**
-         * 6.0 - Managing player's location/position
-         */
+		 * 6.0 - Managing player's location/position
+		 */
 
 		/**
-         * 6.1 - Getting player's X coordinate
-         */
+		 * 6.1 - Getting player's X coordinate
+		 */
 		player.location.x;
 
 		/**
-         * 6.2 - Getting player's Y coordinate
-         */
+		 * 6.2 - Getting player's Y coordinate
+		 */
 		player.location.y;
 
 		/**
-         * 6.3 - Getting player's Z coordinate
-         */
+		 * 6.3 - Getting player's Z coordinate
+		 */
 		player.location.z;
 
 		/**
-         * 6.4 - Getting player's yaw rotation
-         */
+		 * 6.4 - Getting player's yaw rotation
+		 */
 		player.location.yaw;
 
 		/**
-         * 6.5 - Getting player's pitch rotation
-         */
+		 * 6.5 - Getting player's pitch rotation
+		 */
 		player.location.pitch;
 
 		/**
-         * 6.6 - Checking if the player is on ground
-         */
+		 * 6.6 - Checking if the player is on ground
+		 */
 		player.location.onGround;
 
 		/**
-         * 6.0 - Managing player's world
-         */
+		 * 6.0 - Managing player's world
+		 */
 
 		/**
-         * 6.1 - Getting player's world generator
-         */
+		 * 6.1 - Getting player's world generator
+		 */
 		player.world.generator;
 
 		/**
-         * 6.2 - Getting player's world name
-         */
+		 * 6.2 - Getting player's world name
+		 */
 		player.world.name;
 
 		/**
-         * 6.3 - Getting player's world render distance
-         */
+		 * 6.3 - Getting player's world render distance
+		 */
 		player.world.renderDistance;
 
 		/**
-         * 6.4 - Getting player's world spawn coordinates
-         */
+		 * 6.4 - Getting player's world spawn coordinates
+		 */
 		player.world.spawnCoordinates;
 
 		/**
-         * 6.5 - Getting player's world time
-         */
+		 * 6.5 - Getting player's world time
+		 */
 		player.world.time;
 
 		/**
-         * 7.0 - Creating containers
-         */
+		 * 7.0 - Creating containers
+		 */
 		setTimeout(() => {
 			player.openContainer();
 			player.setContainerItem(1, LegacyToRuntimeIdConverter.convert(1));
 		}, 5000);
 
 		/**
-         * 8.0 - Creating toasts
-         */
+		 * 8.0 - Creating toasts
+		 */
 		const toast = new Toast();
 		toast.title = "Hello";
 		toast.message = "This is a toast";
 		toast.send(player);
 
 		/**
-         * 9.0 - Creating scoreboards
-         */
+		 * 9.0 - Creating scoreboards
+		 */
 		const scoreboard = new Scoreboard();
 		scoreboard.displayName = "Scoreboard";
 		scoreboard.displaySlot = DisplaySlot.SIDEBAR;
@@ -323,12 +323,12 @@ function onLoad() {
 		}, 15000); // Let's delete the entire scoreboard after 6 seconds
 
 		/**
-         * 10.0 - Creating forms
-         */
+		 * 10.0 - Creating forms
+		 */
 
 		/**
-         * 10.1 - Normal forms
-         */
+		 * 10.1 - Normal forms
+		 */
 		setTimeout(() => {
 			const form = new Form();
 			form.id = 1;
@@ -345,8 +345,8 @@ function onLoad() {
 		}, 20000); // Let's delay this by 20 seconds
 
 		/**
-         * 10.2 - Custom forms
-         */
+		 * 10.2 - Custom forms
+		 */
 		setTimeout(() => {
 			const customForm = new CustomForm();
 			customForm.title = "Custom Form";
@@ -363,8 +363,8 @@ function onLoad() {
 		}, 25000); // Let's delay this by 25 seconds
 
 		/**
-         * 10.3 - Modal Forms
-         */
+		 * 10.3 - Modal Forms
+		 */
 		setTimeout(() => {
 			const modalForm = new ModalForm();
 			modalForm.title = "Modal Form";
@@ -379,13 +379,13 @@ function onLoad() {
 		}, 30000); // Let's delay this by 30 seconds
 
 		/**
-         * 11.0 - Titles
-         */
+		 * 11.0 - Titles
+		 */
 
 		setTimeout(() => {
 			/**
-             * 11.1 - Creating titles
-             */
+			 * 11.1 - Creating titles
+			 */
 			const title = new Title();
 			title.fadeInTime = 20;
 			title.fadeOutTime = 20;
@@ -395,8 +395,8 @@ function onLoad() {
 			title.send(player);
 
 			/**
-             * 11.1 - Creating subtitles
-             */
+			 * 11.1 - Creating subtitles
+			 */
 			const subTitle = new Title();
 			subTitle.fadeInTime = 20;
 			subTitle.fadeOutTime = 20;
@@ -406,8 +406,8 @@ function onLoad() {
 			subTitle.send(player);
 
 			/**
-             * 11.2 - Creating actionbars
-             */
+			 * 11.2 - Creating actionbars
+			 */
 			const actionbar = new Title();
 			actionbar.fadeInTime = 20;
 			actionbar.fadeOutTime = 20;
