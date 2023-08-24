@@ -417,6 +417,20 @@ function onLoad() {
 			actionbar.send(player);
 		}, 3000); // Let's delay this by 3 seconds
 	});
+	
+    /**
+     * 12.0 - Creating commands
+     */
+    CommandManager.commands.push({
+        name: "examplecommand",
+        description: "An example command",
+        minArgs: 0,
+        maxArgs: 1,
+        requiresOp: false,
+        execute(player) {
+            player.sendMessage("Hello, World!");
+        }
+    });
 }
 
 // This function will be called when the server shutdowns
