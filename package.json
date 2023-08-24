@@ -1,0 +1,6 @@
+{
+    "name": "examplepluginjs",
+    "main": "exampleplugin.js",
+    "version": "1.0.0",
+    "displayName": "ExamplePluginJS"
+}
