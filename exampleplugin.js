@@ -6,11 +6,11 @@
  * ╚██████╔╝██║░░██║███████╗███████╗██║░╚███║██║░░░░░██║░░██║╚█████╔╝╚██████╔╝
  * ░╚═════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚═════╝░
  *
- * The content of this file is licensed using the CC-BY-4.0 license
+ * The content of this file is licensed using the WTFPL license
  * which requires you to agree to its terms if you wish to use or make any changes to it.
  *
- * @license CC-BY-4.0
- * @link Github - https://github.com/GreenFrogMCBE/GreenFrogMCBE
+ * @license WTFPL
+ * @link Github - https://github.com/GreenFrogMCBE/ExamplePluginJS
  * @link Discord - https://discord.gg/UFqrnAbqjP
  */
 const LegacyToRuntimeIdConverter = require("../../src/block/LegacyToRuntimeIdConverter");
