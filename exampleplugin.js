@@ -6,10 +6,10 @@
  * ╚██████╔╝██║░░██║███████╗███████╗██║░╚███║██║░░░░░██║░░██║╚█████╔╝╚██████╔╝
  * ░╚═════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚═════╝░
  *
- * The content of this file is licensed using the WTFPL license
+ * The content of this file is licensed using the CC0 license
  * which requires you to agree to its terms if you wish to use or make any changes to it.
  *
- * @license WTFPL
+ * @license CC0
  * @link Github - https://github.com/GreenFrogMCBE/ExamplePluginJS
  * @link Discord - https://discord.gg/UFqrnAbqjP
  */
