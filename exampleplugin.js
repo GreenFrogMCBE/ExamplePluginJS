@@ -30,7 +30,9 @@ const Toast = require("../../src/player/Toast");
 const Form = require("../../src/forms/Form");
 const Frog = require("../../src/Frog");
 
-// This function will be called when the server starts
+/**
+ * This executes when the plugin loads
+ */
 function onLoad() {
 	/** 
 	 * 1.0 - Logging messages
@@ -434,7 +436,9 @@ function onLoad() {
 	});
 }
 
-// This function will be called when the server shutdowns
+/**
+ * This executes when the plugin shutdowns
+ */
 function onShutdown() {
 	// ...
 }
