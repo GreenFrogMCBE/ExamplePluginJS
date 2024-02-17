@@ -1,3 +1,3 @@
 # ExamplePluginJS
 
-An example JavaScript plugin showcasing GreenFrog API
+An example JavaScript plugin showcasing GreenFrog's API
